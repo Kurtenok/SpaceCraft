@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7057617558595034710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 389306703, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: sight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 683444109, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 817436781, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 817436781, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: shieldBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 817436792, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_Height
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 817436792, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 817436792, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_BaseOffset
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003703304202800236, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284756159786794623, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907675291859382600, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: aim
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907675291859382600, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824115915030746264, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824115915030746264, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824115915030746270, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+--- !u!1 &5504662720122970153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3284756159786794623, guid: 987efbcf55db8a847a26ae692d90e601, type: 3}
+  m_PrefabInstance: {fileID: 7057617558595034710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3451763969104213355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504662720122970153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c3ab7dd9cea9e4da3a035bc5906522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  selectorPrefab: {fileID: 3742753731631253949, guid: 9eedb2e754fa7f44c8773236b49ca044, type: 3}
+  offset: {x: 0, y: 2, z: 0}
