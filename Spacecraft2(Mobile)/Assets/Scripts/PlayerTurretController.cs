@@ -63,6 +63,7 @@ public class PlayerTurretController : MonoBehaviour
         }
         else if(target==null && IsShooting==true)
         {
+            ClearEnemiesInRange();
            if(enemiesInRange.Count>0)
             {
                 target=FindClosestEnemy();
@@ -77,12 +78,17 @@ public class PlayerTurretController : MonoBehaviour
         {
             if(isEnemyInList(collider.tag))
         {
+            if(!(enemiesInRange.Contains(collider.gameObject)))
+            {
             enemiesInRange.Add(collider.gameObject);
+            print("added to list");
+            }
             turret=Turret.Attack;
             if(target==null){
             target=collider.gameObject;}
             //DistanceToTarget=Vector3.Distance(this.transform.position,target.transform.position);
-            AttackEnemy();
+          //  AttackEnemy();
+            
         }
         }
      void OnTriggerExit(Collider other)
@@ -190,6 +196,15 @@ public class PlayerTurretController : MonoBehaviour
         }
         return closestEnemy;
     }
-   
+    void ClearEnemiesInRange()
+    {
+        foreach(GameObject gameObject in enemiesInRange)
+        {
+            if(gameObject==null)
+            {
+                enemiesInRange.Remove(gameObject);
+            }
+        }
+    }
 }
 
