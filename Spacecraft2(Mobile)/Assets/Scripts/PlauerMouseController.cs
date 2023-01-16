@@ -104,15 +104,16 @@ public class PlauerMouseController : MonoBehaviour
         }*/
         if(Input.GetMouseButtonUp(0))
         {
+             print("UP");
             selection=false;
             //print("selection false" + selection);
 
                 ray=Camera.main.ScreenPointToRay(Input.mousePosition);
-                if(Physics.Raycast(ray,out hit,100))
+                if(Physics.Raycast(ray,out hit,300))
                 {
-                    if(IsPointsClose(selectionStartPoint,hit.point,2f))
+                    if(IsPointsClose(selectionStartPoint,hit.point,1f))
                     {
-                        if(hit.collider.gameObject.GetComponent<PlayerSelectionController>())
+                        /*if(hit.collider.gameObject.GetComponent<PlayerSelectionController>())
                         {
                             if(!selectedShips.Contains(hit.collider.gameObject))
                             {
@@ -134,10 +135,11 @@ public class PlauerMouseController : MonoBehaviour
                                     ClearList();
                                     AddShip(hit.collider.gameObject);
                                 }
-                        }
+                        }*/
                     }
                     else
                     {
+                       
                         if(!Input.GetKey(KeyCode.LeftShift))
                         {
                         ClearList();
@@ -150,6 +152,7 @@ public class PlauerMouseController : MonoBehaviour
                             {
                                 if((z>selectionStartPoint.z && z<hit.point.z) || (z<selectionStartPoint.z && z>hit.point.z))
                                 {
+                                    print("Ship added");
                                     AddShip(ship);
                                 }
                             }
@@ -239,7 +242,7 @@ public class PlauerMouseController : MonoBehaviour
     }
     void OnGUI()
     {
-        if (selection)
+        if (selection &&( selectedWidth>5|| selectedHeight>5 || selectedWidth<-5|| selectedHeight<-5))
         {
             GUI.DrawTexture(new Rect(mouseX,mouseY,selectedWidth,selectedHeight),selectTexture);
         }
