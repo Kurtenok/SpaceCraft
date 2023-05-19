@@ -47,8 +47,9 @@ public class Rocket : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         //if(col.gameObject.tag=="Enemy")
+        if(col!=null)
         col.gameObject.SendMessage("TakeDamage",damage);
-        print("Destoy Rocket");
+       // print("Destoy Rocket");
         Destroy(gameObject);
         
     }

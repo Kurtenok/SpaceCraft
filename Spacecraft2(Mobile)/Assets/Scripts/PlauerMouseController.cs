@@ -104,7 +104,7 @@ public class PlauerMouseController : MonoBehaviour
         }*/
         if(Input.GetMouseButtonUp(0))
         {
-             print("UP");
+             //print("UP");
             selection=false;
             //print("selection false" + selection);
 
@@ -152,7 +152,7 @@ public class PlauerMouseController : MonoBehaviour
                             {
                                 if((z>selectionStartPoint.z && z<hit.point.z) || (z<selectionStartPoint.z && z>hit.point.z))
                                 {
-                                    print("Ship added");
+                                   // print("Ship added");
                                     AddShip(ship);
                                 }
                             }
@@ -170,24 +170,29 @@ public class PlauerMouseController : MonoBehaviour
             {
                 if(hit.collider.tag=="Enemy")
                 {
-                    print("attack 0");
-                    AttackEnemy(hit.collider.gameObject);
+                  //  print("attack Enemy");
+                    //AttackEnemy(hit.collider.gameObject);
+                    StartCoroutine(Atack(hit.collider.gameObject,selectedShips));
                 }
                 else
                 {
                 if(selectedShips.Count>1)
                 {
-                    float i=0.5f;
-                    bool locateright=true;
-                    foreach (var ship in selectedShips)
-                    {            
+                    foreach(GameObject ship in selectedShips)
+                    {
                         if(attackers.ContainsKey(ship))
                         {
                             Coroutine coroutine;
                             attackers.TryGetValue(ship,out coroutine);
                             StopCoroutine(coroutine);
                             attackers.Remove(ship);
-                        }           
+                        }    
+                    }
+                    float i=0.5f;
+                    bool locateright=true;
+                    foreach (var ship in selectedShips)
+                    {            
+                      //         
                         NavMeshAgent agent;
                         agent=ship.GetComponent<NavMeshAgent>();
                         if(locateright)
@@ -211,6 +216,7 @@ public class PlauerMouseController : MonoBehaviour
                 }
                 }
             }
+           
         }
         
     }
@@ -257,30 +263,44 @@ public class PlauerMouseController : MonoBehaviour
     {
         foreach(GameObject player in selectedShips)
         {
-            /*if(attackers.ContainsKey(player))
-            {
-                Coroutine coroutine;
-                attackers.TryGetValue(player,out coroutine);
-                StopCoroutine(coroutine);
-                attackers.Remove(player);
-            }*/
- 
-            coroutine1= StartCoroutine(Atack(enemy, player));
-           // attackers.Add(player,coroutine1);
+            Vector3 rand=Random.insideUnitSphere*5;
+            rand.y=0;
+            Vector3 temp=enemy.transform.position+rand;
+            NavMeshAgent agent;
+            agent=player.GetComponent<NavMeshAgent>();
+            agent.SetDestination(temp);
         }
     }
-    IEnumerator Atack(GameObject enemy,GameObject player)
+    IEnumerator Atack(GameObject enemy,List<GameObject> Ships)
     {
-        while(true)
+        while(enemy!=null)
         {
-        print("Coroutine attack started");
+        foreach(GameObject player in Ships)
+        {
+            Vector3 rand=Random.insideUnitSphere*40;
+            rand.y=0;
+            Vector3 temp=enemy.transform.position+rand;
+            NavMeshAgent agent;
+            agent=player.GetComponent<NavMeshAgent>();
+            agent.SetDestination(temp);
+        }
+        yield return new WaitForSeconds(1.5f);
+        /*print("Coroutine attack started");
         GameObject empty=Instantiate(guide,player.transform.position,Quaternion.identity);
         empty.transform.RotateAround(enemy.transform.position,Vector3.up,25f*Time.deltaTime);
         NavMeshAgent agent;
         agent=player.GetComponent<NavMeshAgent>();
         agent.SetDestination(empty.transform.position);
         Destroy(empty);
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.4f);*/
         }
     }
+    IEnumerator Fade()
+{
+    for (int i=0;i<5;++i)
+    {
+        print("corot worked");
+        yield return null;
+    }
+}
 }
