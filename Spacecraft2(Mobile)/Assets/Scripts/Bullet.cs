@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
 //        print("11");
-        if(!(col.gameObject.tag=="Bullet"))
+        if((col.gameObject.TryGetComponent<HPController>(out HPController hp)&& col.gameObject!=null))
         {
         col.gameObject.SendMessage("TakeDamage",damage);
         }

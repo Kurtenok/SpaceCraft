@@ -13,7 +13,7 @@ public class RocketLauncher : MonoBehaviour
    [SerializeField] float damage;
    [SerializeField] float force;
    float DistanceToTarget;
-   [SerializeField] string Enemy;
+   [SerializeField] string[] Enemy;
    [SerializeField] bool IsShooting;
    [SerializeField] GameObject Lead;
    GameObject lead;
@@ -104,7 +104,7 @@ public class RocketLauncher : MonoBehaviour
     void OnTriggerEnter(Collider collider)
         {
             //print("1");
-            if(collider.gameObject.tag==Enemy&&target==null)
+            if(isEnemyInList(collider.gameObject.tag)&&target==null)
         {
            // print("2");
             turret=Turret.Attack;
@@ -132,5 +132,21 @@ public class RocketLauncher : MonoBehaviour
     {
         isCanShoot=false;
     }
-      
+    public string[] GetEnemy()
+    {
+        return Enemy;
+    }
+    public void SetEnemy(string[] Enemies)
+    {
+       Enemy=Enemies;
+    }
+    bool isEnemyInList(string en)
+    {
+        foreach (string enemy in Enemy)
+        {
+            if (enemy==en)
+            return true;
+        }
+        return false;
+    }
 }

@@ -22,7 +22,7 @@ public class PlauerMouseController : MonoBehaviour
     [SerializeField] bool selection=false;
     [SerializeField]Vector3 selectionStartPoint;
     [SerializeField] GameObject guide;
-    Dictionary<GameObject,Coroutine> attackers;
+    Dictionary<GameObject,Coroutine> attackers=new Dictionary<GameObject,Coroutine>();
    
     //[SerializeField]GameObject 
     void Start()
@@ -178,7 +178,7 @@ public class PlauerMouseController : MonoBehaviour
                 {
                 if(selectedShips.Count>1)
                 {
-                    foreach(GameObject ship in selectedShips)
+                   foreach(GameObject ship in selectedShips)
                     {
                         if(attackers.ContainsKey(ship))
                         {

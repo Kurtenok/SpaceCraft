@@ -47,7 +47,7 @@ public class Rocket : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         //if(col.gameObject.tag=="Enemy")
-        if(col!=null)
+        if(col!=null &&  col.gameObject.TryGetComponent<HPController>(out HPController hp))
         col.gameObject.SendMessage("TakeDamage",damage);
        // print("Destoy Rocket");
         Destroy(gameObject);

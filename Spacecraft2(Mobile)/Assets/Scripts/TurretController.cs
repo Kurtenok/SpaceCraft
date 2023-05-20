@@ -161,5 +161,13 @@ public class TurretController : MonoBehaviour
     {
         isCanShoot=false;
     }
+    public string[] GetEnemy()
+    {
+        return Enemy;
+    }
+    public void SetEnemy(string[] Enemies)
+    {
+       Enemy=Enemies;
+    }
 }
 
