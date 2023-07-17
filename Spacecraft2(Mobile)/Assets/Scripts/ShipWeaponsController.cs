@@ -51,27 +51,39 @@ public class ShipWeaponsController : MonoBehaviour
             }
         }
     }
-    private void OnValidate() {
-        StartCoroutine(CheckTag());
-    }
+   /* private void OnValidate() {
+         Debug.Log("valodate worked");
+        if(chekTag==null)
+        {
+        Debug.Log("tag check started");
+        chekTag=StartCoroutine(CheckTag());
+        }
+    }*/
     IEnumerator CheckTag()
     {
-        yield return new WaitForSeconds(5.0f);
-        List<string> tags=new List<string>();
-        tags.AddRange(UnityEditorInternal.InternalEditorUtility.tags);
-        foreach(string enemy in Enemy)
+        while(true)
         {
-            foreach(string tag in tags)
+            Debug.Log("coroutine started");
+            bool tagsIncorrect=false;
+            yield return new WaitForSeconds(2.0f);
+            List<string> tags=new List<string>();
+            tags.AddRange(UnityEditorInternal.InternalEditorUtility.tags);
+            foreach(string enemy in Enemy)
             {
-                if(enemy!=tag)
+                if(!tags.Contains(enemy))
                 {
                     Debug.Log("Inoorect tag "+enemy);
-                    break;
+                    tagsIncorrect=true;
                 }
             }
-            Debug.Log("stop coroutine");
-            StopCoroutine(CheckTag());
+            if(!tagsIncorrect)
+            {
+                Debug.Log("stop coroutine");
+                StopCoroutine(chekTag);
+                chekTag=null;
+            }
         }
+
     }
     void Start()
     {

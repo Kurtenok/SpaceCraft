@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 132
+  controlID: 41
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 56
+  controlID: 42
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 57
+  controlID: 43
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 64
-  m_LastProjectPath: D:\GitTest\SpaceCraft\Spacecraft2(Mobile)
+  m_LastProjectPath: D:\UnityProject\SpaceCraft\Spacecraft2(Mobile)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 6.200012}
-    m_SelectedIDs: 667d0000
-    m_LastClickedID: 32102
-    m_ExpandedIDs: 00000000667d000000ca9a3b
+    m_SelectedIDs: 7a4f0000
+    m_LastClickedID: 20346
+    m_ExpandedIDs: 00000000564f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000564f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -412,7 +412,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 73.20001}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -483,7 +483,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aecbffff
+      m_ExpandedIDs: 6efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -543,9 +543,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.4421062, y: 0.4871235, z: -2.9606142}
+    m_Target: {x: -31.386282, y: -11.917318, z: -29.128448}
     speed: 2
-    m_Value: {x: 3.4421062, y: 0.4871235, z: -2.9606142}
+    m_Value: {x: -31.386282, y: -11.917318, z: -29.128448}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -592,11 +592,11 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.05656452, y: 0.9421666, z: -0.20703904, w: -0.2574073}
+    m_Target: {x: 0.024531858, y: -0.9324056, z: 0.06444285, w: 0.35478798}
     speed: 2
-    m_Value: {x: -0.056253865, y: 0.94255114, z: -0.20712353, w: -0.25599363}
+    m_Value: {x: -0.024531743, y: 0.93240124, z: -0.06444256, w: -0.35478634}
   m_Size:
-    m_Target: 10
+    m_Target: 32.10753
     speed: 2
     m_Value: 32.10753
   m_Ortho:
