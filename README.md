@@ -25,3 +25,5 @@ You can add turrets to any ship. There are two types of them in the game - machi
 
 Enemies
 Enemies are presented in the game in two types - light and heavy frigates, but in order to create a new one, you just need to attach the script "HP Controller", NavMeshAgent, RigitBody (all this can be copied from other ships), set up colliders and place turrets. The Spawner script, which is attached to an empty object,called "Spawners", on the scnene, is responsible for the appearance of enemies. In it, you can adjust the radius of the appearance of enemies, and the waves of their appearance. In each wave, you must specify the type of enemy, quantity and time of appearance after the last wave. The enemies appears randomly near the object that is attached to "Spawners".
+
+P.S. At the moment, you can only play the game from a computer. Mobile control will be added later.
